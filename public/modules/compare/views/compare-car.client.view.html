@@ -1,0 +1,76 @@
+<link rel="stylesheet" type="text/css" href="modules/compare/views/colors.css">
+
+<section>
+	<div class>
+		<h1 style="text-align: center">Price Comparison Tool</h1>
+		<p>This tool allows a buyer to compare the different prices for the car they are looking at by customizing a specific car (by make/model/year), choosing interior and exterior color, wheels, and other accessories. Once this is done, the second tab of the tool shows the true market value of this customization, and the final tab allows the buyer to see what local dealers in their area are charging for this customization.</p>
+	</div>
+
+  <div class="really">
+    <div id="nvcwidget"></div>
+  
+
+<script type="text/javascript">
+    console.log("I aget ran");
+
+function loadScript( url, callback ) {
+  var script = document.createElement( "script" )
+  script.type = "text/javascript";
+  if(script.readyState) {  //IE
+    script.onreadystatechange = function() {
+      if ( script.readyState === "loaded" || script.readyState === "complete" ) {
+        script.onreadystatechange = null;
+        callback();
+      }
+    };
+  } else {  //Others
+    script.onload = function() {
+      callback();
+    };
+  }
+
+  script.src = url;
+  document.getElementsByTagName( "head" )[0].appendChild( script );
+}
+loadScript("http://widgets.edmunds.com/loader-v2.js", initWidget);
+
+
+// call the function...
+loadScript(pathtoscript, function() {
+  alert('script ready!'); 
+});
+
+
+function initWidget(){
+    console.log("Hmmm");
+var widget = EDM.createWidget({
+    "type": "nvc",
+    "renderTo": "nvcwidget",
+    "style": {
+        "width": 970,
+        "height": 480,
+        "theme": "green",
+        "color": "light",
+        "border": "1px",
+        "borderRadius": "5px"
+    },
+    "options": {
+        "apiKey": "xmqmb7hec7xmquv274vsd8ne",
+        "includedMakes": "all",
+        "dealerKeywords": "",
+        "zipCode": "84043",
+        "tabs": {
+            "tab1": "Configure",
+            "tab2": "True Market Value",
+            "tab3": "Price Quotes"
+        }
+    }
+});
+};
+</script>
+</div>
+<!-- </div> -->
+
+</section>
+
+

@@ -1,0 +1,41 @@
+h1 {
+	text-align: center;
+}
+
+.ts {
+	text-align: justify;
+}
+	
+.myButton {
+	background-color: #ff1a1a;
+	-moz-border-radius:27px;
+	-webkit-border-radius:27px;
+	border-radius:27px;
+	border:2px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:24px;
+	padding:18px 52px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+	text-align: center;
+    vertical-align: center;
+    margin-left: 400px;
+}
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.fax {
+  position: absolute;
+  right: 60px;
+  top: 195px;
+  width: 220px;
+  height: 220px;
+}

@@ -1,9 +1,10 @@
-body {
-	background-color: #daad86;
-}
-
 .content {
 	margin-top: 50px;
+}
+
+body {
+
+	background-color: #daad86;
 }
 .undecorated-link:hover {
 	text-decoration: none;
@@ -36,3 +37,10 @@ body.ng-cloak
 }
 
 .car{margin-bottom:20px;}
+
+.really {
+	background color: red;
+	border: 2px;
+	padding: 3px;
+	margin: auto;
+}

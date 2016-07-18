@@ -1,0 +1,87 @@
+<link rel="stylesheet" type="text/css" href="modules/cont/views/style.css">
+
+<section>
+	<div class="page-header"></div>
+
+
+<h1>Fuel Savings Calculator</h1>
+<p class="ts">One factor that should play an important role in your decision to buy a car is how much it will cost to drive it. For example, a vehicle that gets 30 MPG will cost you $573 less to fuel each year than one that gets 20 MPG (assuming 15000 miles of driving annually and a fuel cost of $2.29). In addition to saving you money at the gas pump, getting better gas mileage helps to save money in a number of other ways, such as reducing oil dependence costs on our economy and increasing energy sustainability. This tool will allow you to consider the costs of two vehicles with different miles per gallon, or gas mileage. It will also show you what your monthly and annual savings would be with the car which has better gas mileage, as well as what the savings would be over the foreseeable future for the next ten years.</p>
+
+<div class="mfsc-upperdiv">
+<p><b>INPUT</b></p>
+<form name=mpgfuelsavingscalc method=POST>
+<div class="mfsc-innerdiv">
+<p>Gas Price<br>
+<input type=text onkeypress="return validNumber(event)" name=gasPrice size=7></p>
+<p class="mfsc-error" id="gasPriceError"></p>
+</div>
+<div class="mfsc-innerdiv">
+<p>Miles Per Year<br> <input type=text onkeypress="return validNumber(event)" name=miles size=7></p>
+<p class="mfsc-error" id="milesError"></p>
+</div>
+<div class="mfsc-innerdiv">
+<p>(A) Car MPG<br>
+<input type=text onkeypress="return validNumber(event)" name=mpgCarA size=7></p>
+<p class="mfsc-error" id="mpgCarAError"></p>
+</div>
+<div class="mfsc-innerdiv">
+<p>(B) Car MPG<br>
+<input type=text onkeypress="return validNumber(event)" name=mpgCarB size=7></p>
+<p class="mfsc-error" id="mpgCarBError"></p>
+</div>
+<input type=button onClick="return fuelSavings()" value=Calculate>  <input type=button onClick="return fuelSavingsReset()" value=Reset>
+<br><small>* Numbers and decimal points only.</small>
+<p class="mfsc-infoMessage" id="infoMessage"></p>
+</form>
+</div>
+<div class="mfsc-middlediv">
+<p><b>COSTS</b></p>
+<div class="mfsc-innerdiv">
+<p>(A) 25 Miles</p>
+<p class="mfsc-costs" id="mile25CostCarA"></p><br>
+</div>
+<div class="mfsc-innerdiv">
+<p>(B) 25 Miles</p>
+<p class="mfsc-costs" id="mile25CostCarB"></p><br>
+</div>
+<div class="mfsc-innerdiv">
+<p>(A) Monthly</p>
+<p class="mfsc-costs" id="monthlyCostCarA"></p><br>
+</div>
+<div class="mfsc-innerdiv">
+<p>(B) Monthly</p>
+<p class="mfsc-costs" id="monthlyCostCarB"></p><br>
+</div>
+<div class="mfsc-innerdiv">
+<p>(A) Annual</p>
+<p class="mfsc-costs" id="annualCostCarA"></p><br>
+</div>
+<div class="mfsc-innerdiv">
+<p>(B) Annual</p>
+<p class="mfsc-costs" id="annualCostCarB"></p><br>
+</div>
+</div>
+<div class="mfsc-lowerdiv">
+<p><b>SAVINGS</b></p><br>
+<p>Monthly</p>
+<p class="mfsc-savings" id="monthlySavings"></p><br>
+<p>Annual</p>
+<p class="mfsc-savings" id="annualSavings"></p><br>
+<p>After...</p>
+<p class="mfsc-afteryear" id="yeartwoSavings"></p>
+<p class="mfsc-afteryear" id="yearthreeSavings"></p>
+<p class="mfsc-afteryear" id="yearfourSavings"></p>
+<p class="mfsc-afteryear" id="yearfiveSavings"></p>
+<p class="mfsc-afteryear" id="yeartenSavings"></p>
+<p> </p>
+</div>
+<div class="mfsc-resetdiv">
+<p> </p>
+</div>
+<p class="mfsc-pepTalk" id="pepTalk">It's pretty amazing how the savings start to add up after only a few years!</p><br>
+
+<img class="pump" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5RHK5k0V0NuuXVMaY5fiwKNkIeZ2UlXlg3QT858h9n24fpebm">
+
+<script src="modules/cont/views/app.js"></script>
+
+</section>
